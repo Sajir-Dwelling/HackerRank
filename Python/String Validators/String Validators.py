@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 if __name__ == '__main__':
     s = input()
 
@@ -7,13 +6,3 @@ if __name__ == '__main__':
     print(any(item.isdigit() for item in s))
     print(any(item.islower() for item in s))
     print(any(item.isupper() for item in s))
-=======
-if __name__ == '__main__':
-    s = input()
-
-    print(any(item.isalnum() for item in s))
-    print(any(item.isalpha() for item in s))
-    print(any(item.isdigit() for item in s))
-    print(any(item.islower() for item in s))
-    print(any(item.isupper() for item in s))
->>>>>>> 213b2ac (Added new files and folders)
