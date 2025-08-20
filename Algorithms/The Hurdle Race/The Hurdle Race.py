@@ -17,6 +17,14 @@ import sys
 
 def hurdleRace(k, height):
     # Write your code here
+    hurdle = max(height)
+
+    if hurdle>k:
+        dose = hurdle - k
+    else:
+        dose = 0
+    return dose
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
