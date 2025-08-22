@@ -1,24 +1,12 @@
-#!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
 
-#
-# Complete the 'miniMaxSum' function below.
-#
-# The function accepts INTEGER_ARRAY arr as parameter.
-#
-
-def miniMaxSum(arr):
-    # Write your code here
-    for i in arr:
-        arr[i] = arr[i]-1
-        sum(arr)
-if __name__ == '__main__':
-
-    arr = list(map(int, input().rstrip().split()))
-
-    miniMaxSum(arr)
+def find_index(lst,target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1
+if __name__ == "__main__":
+    lst = list(map(int,input().split()))
+    target = int(input())
+    result = find_index(lst,target)
+    print(result)
