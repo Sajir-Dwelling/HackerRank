@@ -5,7 +5,8 @@ import os
 import random
 import re
 import sys
-from collections import defaultdict
+from collections import Counter
+
 #
 # Complete the 'sockMerchant' function below.
 #
@@ -17,16 +18,15 @@ from collections import defaultdict
 
 def sockMerchant(n, ar):
     # Write your code here
-    color_socks = defaultdict(int)
-    pairs = 0
+    counting = Counter(ar)
+    pair = 0
 
-    for sock in ar:
-        color_socks[sock] += 1
-    for count in color_socks.values():
-        pairs = pairs + count//2
+    if not ar:
+        return 0
 
-    return pairs
-
+    for value in counting.values():
+        pair += value//2
+    return pair
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
